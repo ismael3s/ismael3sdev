@@ -6,6 +6,7 @@ import expressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-nano-demo.vercel.app",
+  site: 'https://ismael3s.github.io',
+  base: 'ismael3sdev',
   integrations: [expressiveCode(),mdx(), sitemap(), tailwind(), ]
 });
