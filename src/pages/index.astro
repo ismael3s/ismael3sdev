@@ -11,11 +11,9 @@ const garden = (await getCollection("garden"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-// const projects = (await getCollection("projects"))
-//   .filter(project => !project.data.draft)
-//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-//   .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
-
+const projects = (await getCollection("projects", (project) => !project.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 // const allwork = (await getCollection("work"))
 //   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
 //   .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
@@ -94,7 +92,7 @@ const garden = (await getCollection("garden"))
         </ul>
       </section> -->
 
-      <!-- <section class="animate space-y-6">
+      <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Recent projects
@@ -110,7 +108,7 @@ const garden = (await getCollection("garden"))
             </li>
           ))}
         </ul>
-      </section> -->
+      </section>
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
