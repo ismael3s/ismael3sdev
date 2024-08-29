@@ -38,7 +38,7 @@ const { title = "" } = Astro.props;
   // Wait for the DOM to be fully loaded
   document.addEventListener("DOMContentLoaded", async () => {
     extractMermaidCode();
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ startOnLoad: true, theme: "dark" });
   });
 </script>
 
