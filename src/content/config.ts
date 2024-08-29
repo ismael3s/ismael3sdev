@@ -42,6 +42,7 @@ const projects = defineCollection({
     repoURL: z.string().optional(),
     url: z.string().optional(),
     type: z.string().optional(),
+    technologies: z.string().array().optional(),
   }),
 });
 
