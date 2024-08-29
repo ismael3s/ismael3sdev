@@ -155,11 +155,9 @@ function toggleTheme(dark) {
 
     document.head.appendChild(css);
 
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+
+    document.documentElement.classList.add("dark");
+    
 
   window.getComputedStyle(css).opacity;
     document.head.removeChild(css);
