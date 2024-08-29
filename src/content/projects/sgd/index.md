@@ -2,11 +2,23 @@
 title: "SGD"
 description: "A project for managing freelancer teams and task management."
 date: "Jan 13 2024"
-url: "https://sgd.projetil.com"
 demoURL: ""
 repoURL: ""
 draft: false
 type: "Freelance"
+technologies:
+  - C#
+  - .NET
+  - Serilog
+  - Entity Framework
+  - Typescript
+  - ReactJS
+  - React Query
+  - NextJS
+  - Tailwind
+  - Docker
+  - PostgreSQL
+  - New Relic
 ---
 
 ![SGD Login Screen](./home.png)
@@ -30,19 +42,13 @@ As a result, these companies are using SGD to manage their freelancers' teams:
 
 This has improved the management of their operations by focusing everything that they needs in one application.
 
-### Is this project finished?
-
-No, the project is still receiving updates, but the product is already in use.
-
-![Loading Screen](./inside.png)
-
 ### What technologies were used in the frontend of this project?
 
 The frontend uses: Git, ReactJS, React Hooks, NextJS, TypeScript, Node, React Query, NextAuth, React DND, Jest, Tailwind, Shadcn, and Axios.
 
 ### What technologies were used in the backend of this project?
 
-The backend uses: Git, C#, .NET, Entity Framework, PostgreSQL, TestContainers, xUnit, Unit and Integration Tests, Docker, HangFire, Vertical Slice, Multi-Tenant.
+The backend uses: Git, C#, .NET, Entity Framework, Serilog, PostgreSQL, TestContainers, xUnit, Unit and Integration Tests, Docker, HangFire, Vertical Slice, Multi-Tenant, New Relic.
 
 ### How is this project deployed?
 
@@ -51,3 +57,9 @@ Both the frontend and backend are deployed using CI/CD with Azure DevOps Pipelin
 ### What were the challenges in this project?
 
 For me, one of the main challenges was how the data is stored for each tenant. At the moment, each company has its own database, and only one frontend is deployed for both companies. Based on the hostname, we decide which database the application will query for data. Given the size of the application, this solution is "good enough" but can be improved as the product grows.
+
+### Is this project finished?
+
+No, the project is still receiving updates, but the product is already in use.
+
+![Loading Screen](./inside.png)
