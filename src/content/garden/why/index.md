@@ -1,7 +1,7 @@
 ---
 title: "Why Am I Doing This?"
 description: "Why Am I Doing This?"
-slug: "why-am-idoing-this"
+slug: "why-am-i-doing-this"
 date: "Aug 28 2024"
 updatedAt: "Aug 28 2024"
 ---
