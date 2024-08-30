@@ -17,4 +17,4 @@ The frontend is built with Git, Astro, TypeScript, Node, Tailwind, Markdown, Sen
 
 ### How is this project deployed?
 
-The project is deployed with a smooth CI/CD pipeline using GitHub Actions and is hosted on GitHub Pages.
+The project is deployed with a CI/CD pipeline using GitHub Actions and is hosted on GitHub Pages.
