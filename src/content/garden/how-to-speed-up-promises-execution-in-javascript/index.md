@@ -1,9 +1,9 @@
 ---
-title: "How to execute promises in parallel, advantages and pitfalls"
-description: "Improving your javascript code by running promises in simultaneously"
-slug: "executing-promises-in-parallel"
+title: "How to execute promises using concurrency, advantages and pitfalls"
+description: "Improving your javascript code by running promises concurrently"
+slug: "executing-promises-by-running-concurrently"
 date: "Aug 28 2024"
-updatedAt: "Aug 28 2024"
+updatedAt: "Sep 09 2024"
 ---
 
 Hi folks! Recently, one of my friends showed me a piece of code that was taking about 12 seconds to execute. The code looked something like the example below. I want to discuss some small improvements we can make, along with their advantages and potential pitfalls.
@@ -22,7 +22,7 @@ async function main() {
 }
 ```
 
-In the code above, it's just a regular JavaScript code to be executed by the NodeJS Runtime nothing inherently "wrong" with it. However, this code could run faster by executing both promises simultaneously.
+In the code above, it's just a regular JavaScript code to be executed by the NodeJS Runtime nothing inherently "wrong" with it. However, this code could run faster by executing both promises "simultaneously".
 
 ## Huh? 🤔
 
@@ -49,9 +49,9 @@ But we have a **SERIOUS PROBLEM** with this approach...
 
 ## The Problem with `Promise.all`
 
-The `Promise.all` uses the principle of "all or none". This means that if any of the promises in the Promise.all call fails, the entire operation will throw an error, and you'll need to handle it.
+The `Promise.all` follows "fail fast" principle. This means that if any of the promises in the Promise.all call fails, the entire operation will be canceled, throwing an error that you'll need to handle it.
 
-Now, what happens to the promises that have already completed their tasks when one of the promises fails?
+So when this happens at beginning and no promises has been fulfilled, this is amazing, because it's stops early, but let's imagine the worst-case scenario: what happens to the promises that have already completed their tasks when one of the promises fails?
 
 I will give to you a few seconds to think about it...
 
@@ -138,6 +138,8 @@ async function main() {
 ```
 
 ### References and you must read it, trust me
+
+[Promise Concurrency](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)
 
 [Promise.all In MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
