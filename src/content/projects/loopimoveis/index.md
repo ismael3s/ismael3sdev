@@ -1,7 +1,7 @@
 ---
 title: "LoopImoveis"
 description: "a digital marketplace for properties in the capital of São Paulo"
-date: "Jan 20 2022"
+date: "Jan 20 2023"
 url: "https://loopimoveis.com"
 demoURL: ""
 repoURL: ""
